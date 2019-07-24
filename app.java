@@ -25,18 +25,13 @@ public class app{
                 board[line][column] = a;
                 board[lineSize - line][columnSize - column] = a;
                 
-                if(line > 0 && column == columnSize - line){
+                if(line > 0 && column == columnSize - line)
                     for(int i = columnSize, j = line; i > columnSize - line; i--, j++){
-                        a = board[line][i - (columnSize - line)];
-                        Interface.toTerminal("line: "+line+" | i: "+i+" | a: "+ a +
-                                             "\nGet by -> board[" + line + "]["+ (i - (columnSize - line))+"]\n"+
-                                             "columnSize: "+columnSize+
-                                             "\ncolumnSize - line: " + (columnSize - line)+"\n"+
-                                             "i - (columnSize - line)"(i - (columnSize - line)));
+                        a = board[line][columnSize - i];
                         board[line][i] = a;
                         board[lineSize - line][columnSize - i] = a;
                     }
-                }
+                
             }
         }
 
@@ -44,9 +39,3 @@ public class app{
         Interface.Finish();
     }
 }
-
-/*
-Interface.toTerminal("board["+(lineSize -1 -line)+"]["+(columnSize -1 -i)+"]");
-Interface.toTerminal("\n" + "board["+(line)+"]["+(column)+"]");
-paper.refresh();
-*/
