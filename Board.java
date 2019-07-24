@@ -23,9 +23,9 @@ private String line;
             }
 
             if(i == board.length -1) break;
-            line += "\n";
+            line += "\n ";
             for(int j = 0; j < board[i].length; j++)
-                line += "----";
+                line += "--- ";
             line += "\n";
         }
 
